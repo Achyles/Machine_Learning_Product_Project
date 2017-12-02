@@ -1,11 +1,11 @@
-# Web Scrapper for the project
+# Web scraper for the project
 
 ## CU_Course_Directory
 
-A simple web scrapper for CU Course Directory for Spring 2018 Courses
+A simple web scraper for CU Course Directory for Spring 2018 Courses
 Can be modified for other terms as well.
 
-The output for the COMS STAT IEOR deparment in [CU_Course_Directory_info](./CU_Course_Directory_info)
+The output for the COMS STAT IEOR deparments in [CU_Course_Directory_info](./CU_Course_Directory_info)
 
 
 Usage sample, from terminal run:
