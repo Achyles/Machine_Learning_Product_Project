@@ -7,6 +7,7 @@ Created on Wed Nov 29 23:02:08 2017
 
 A simple web scrapper for CU Course Directory for Spring 2018 Courses
 Can be modified for other terms as well
+Change encoding at line 171
 Usage sample, from terminal run:
     python CU_Course_Directory.py 
     COMS STAT IEOR -d out/
@@ -28,6 +29,7 @@ def department_course_list(department):
     
     courseURL = []
     site = requests.get("http://www.columbia.edu/cu/bulletin/uwb/subj/" + department + "/_Spring2018_text.html")
+    site.encoding = "windows-1252"
     siteBS = BeautifulSoup(site.content, "lxml")
     
     for link in siteBS.find_all("a"):
@@ -57,6 +59,7 @@ def course_info(course_list):
         try:        
             
             course = requests.get(link)
+            course.encoding = "windows-1252"
             courseBS = BeautifulSoup(course.content, "lxml")
             
             s = courseBS.get_text()
@@ -102,7 +105,7 @@ def course_info(course_list):
             if instructor_ix == -1:
                 courseDict[key]["instructor"] = ""
             else:
-                courseDict[key]["instructor"] = ls[instructor_ix]                
+                courseDict[key]["instructor"] = ls[instructor_ix].split(" - ")[0]
                 courseDict[key]["instructor 2"] = ""
                 if multi_ins:
                     courseDict[key]["instructor 2"] = ls[instructor_ix+1]
@@ -120,7 +123,7 @@ def course_info(course_list):
             
     return courseDict
         
-def write_csv(course_dict, file_name, directory = ""):
+def write_csv(course_dict, file_name, directory = "", encod = "UTF-8"):
     """
     Takes in a course dict, a file name, directory
     
@@ -131,7 +134,7 @@ def write_csv(course_dict, file_name, directory = ""):
     if not os.path.exists(directory):
         os.makedirs(directory)
     
-    file = open(directory+file_name, "w")
+    file = open(directory+file_name, "w", encoding = encod)
     
     with file:
         fields = ["course number","section","name", "instructor", "instructor 2", "is full", "description"]
@@ -165,7 +168,7 @@ if __name__ == "__main__":
         if len(course) == 4:
             cls = department_course_list(course)
             cd = course_info(cls)
-            write_csv(cd, course + "_course_info.csv", directory) 
+            write_csv(cd, course + "_course_info.csv", directory, "windows-1252") 
     
     
     
