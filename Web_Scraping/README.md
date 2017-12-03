@@ -14,8 +14,8 @@ Usage sample, from terminal run:
 ``` bash
     >> python CU_Course_Directory.py 
     
-    Please enter a list of four-letter department abbreviations (e.g. COMS, HIST, MATH) to get csv files of course information.
-    Files will be stored by default in the current directory, you can also change the directory with "-d" flag + directory:
+    "Please enter a list of four-letter department abbreviations (e.g. COMS, HIST, MATH) to get csv files of course information.
+    Files will be stored by default in the current directory, you can also change the directory with "-d" flag + directory:"
 
     >> COMS STAT IEOR -d out/
 ```
