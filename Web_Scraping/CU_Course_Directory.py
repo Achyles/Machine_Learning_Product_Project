@@ -5,7 +5,7 @@ Created on Wed Nov 29 23:02:08 2017
 
 @author: Zixuan Li
 
-A simple web scrapper for CU Course Directory for Spring 2018 Courses
+A simple web scraper for CU Course Directory for Spring 2018 Courses
 Can be modified for other terms as well
 Change encoding at line 171
 Usage sample, from terminal run:
