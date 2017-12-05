@@ -1,7 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 
-@author: Achykes
+@author: Achyles
+"""
+
+"""
+A word embedding model takes a wordList and a scoreList
+and embeds each word with its frequency and the average score it receives.
+
+The model is saved in a dictionary.
+
+Prediction returns the score of the word.
 """
 
 class WordEmbed():
