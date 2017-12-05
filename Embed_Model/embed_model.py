@@ -22,3 +22,7 @@ class WordEmbed():
        
     def predict(self,key):
         return self.embed[key][0]
+
+    
+    def getModel(self):
+        return self.embed
