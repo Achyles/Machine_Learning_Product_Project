@@ -25,3 +25,5 @@ Usage sample, from terminal run:
 For usage of get function of the tornado API.
 
 Takes in a list of course numbers. Return a dictionary that can be used as json format.
+
+Works offline. Run CU_Course_Directory.py to get the csv file first. 
