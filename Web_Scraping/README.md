@@ -1,6 +1,6 @@
 # Web scraper for the project
 
-## CU_Course_Directory
+## CU_Course_Directory.py
 
 A simple web scraper for CU Course Directory for Spring 2018 Courses.
 Can be modified for other terms as well.
@@ -20,4 +20,8 @@ Usage sample, from terminal run:
     >> COMS STAT IEOR -d out/
 ```
 
-    
+## get_course_description.py
+
+For usage of get function of the tornado API.
+
+Takes in a list of course numbers. Return a dictionary that can be used as json format.
