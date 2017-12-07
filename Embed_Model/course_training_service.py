@@ -11,25 +11,29 @@ The trained model is saved as a dictionary in json file.
 """
 
 from embed_model import WordEmbed as WE
-from preprocess import *
+from filenames import *
 
-#define the filename of saved model here
-fncmodel = depart+'_course_model'
+def course_tain(depart, modelname):
+	#define the filename of saved model here
+	fncmodel = depart+modelname
 
-#load dictionaries of description and rating
-desDict = load_json(fndes, datapath)
-crDict = load_json(fncourse, datapath)
+	#load dictionaries of description and rating
+	desDict = load_json(fndes, datapath)
+	crDict = load_json(fncourse, datapath)
 
-#obtain the lists of keywords and corresponding rating
-wordList = list()
-scoreList = list()
-for key in crDict:
-    wordList.append(desDict[key])
-    scoreList.append(crDict[key])
+	#obtain the lists of keywords and corresponding rating
+	wordList = list()
+	scoreList = list()
+	for key in crDict:
+	    wordList.append(desDict[key][0])
+	    scoreList.append(crDict[key])
 
-#train the model
-weModel = WE()
-weModel.train(wordList, scoreList)
+	#train the model
+	weModel = WE()
+	weModel.train(wordList, scoreList)
 
-#save the model as dictionary to json file
-save_json(weModel.get_model(), fncmodel, modelpath)
+	#save the model as dictionary to json file
+	save_json(weModel.get_model(), fncmodel, modelpath)
+
+if __name__ == "__main__":
+	course_tain(depart,mncourse)
