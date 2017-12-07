@@ -5,30 +5,24 @@
 """
 
 """
-This service takes in professor rating data from Culpa to train the word embedding model.
+This is a model training service that
+takes in professor rating data from Culpa to train the word embedding model.
 The trained model is saved as a dictionary in json file.
 """
 
 from embed_model import WordEmbed as WE
-import pandas as pd
+from preprocess import *
 
-#define the department you working on here
-depart = 'COMS'
+#define the filename of saved model here
+fnpmodel = depart+'_prof_model'
 
-#define the filename for saved model here
-filename = 'prof_model'
-
-#load culpa data
-data =  pd.read_csv('../data/culpa.csv')
-
-#preprocess the data
-profr = data[['Professor','Rating']]
-profr = profr.groupby(['Professor'])['Rating'].mean().to_dict()
+#load dictionaries of professor rating
+profDict = load_json(fnprof, datapath)
 
 #train the model
 weModel = WE()
-weModel.dict_train(profr)
+weModel.train_dict(profDict)
 
-#save the model to json file
-weModel.save_model(filename)
+#save the model as dictionary to json file
+save_json(weModel.get_model(), fnpmodel, modelpath)
 

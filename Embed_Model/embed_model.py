@@ -4,15 +4,13 @@
 @author: Achykes
 """
 
-import json
-
 class WordEmbed():
     
     def __init__(self):
         self.embed = dict();
     
     #trian the model on input lists 
-    def train(self, wordList, scoreList, ):
+    def train(self, wordList, scoreList):
         for i in range(len(wordList)):
             for w in wordList[i]:
                 if w not in self.embed:
@@ -22,8 +20,8 @@ class WordEmbed():
                     newscore = (post[0]*post[1]+scoreList[i])/(post[1]+1)
                     self.embed.update({w:[newscore,post[1]+1]})
                     
-    #trian the model on input dictionary                
-    def dict_train(self, otherdict):
+    #trian the model on dictionary               
+    def train_dict(self, otherdict):
         self.embed.update(otherdict)            
         
        
@@ -34,7 +32,3 @@ class WordEmbed():
     def get_model(self):
         return self.embed
         
-    #save the model as dictionary to json file
-    def save_model(self, filename):
-        with open(filename+'.json','w') as fp:
-            json.dump(self.embed, fp)
