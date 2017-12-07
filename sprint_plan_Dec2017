@@ -1,0 +1,21 @@
+
+What we have done so far:
+1. data mining from Culpa and CU directory.
+2. building word embedding model.
+3. implementing model training services for course and professor rating
+4. implementing course evaluation service based on trained models
+5. building REST api for services with tornado
+
+First Iteration:
+
+1. Improve UI and dashboard output
+2. Improve file structure
+3. Implement course recommending service
+4. Expand service coverage on courses
+5. Improve training algorithm and evaluating algorithm
+
+Team Member:
+Jiaqian Chen,   jc4676
+TaeYoung Choi,  tc2777
+Zixuan Li,      zl2603
+Zhaoxi Zheng,   zz2497
