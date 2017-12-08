@@ -11,9 +11,16 @@ based on pretrained models on course and prof reviews.
 """
 
 import json
+import os.path
+
 from filenames import *	
+from make_data import *
 	
 def evaluate(depart, cnum):
+	#check if data file exists
+	if not os.path.isfile(modelpath+mncourse+'.json'):
+		make_data()
+
 	with open(modelpath+mncourse+'.json') as fp1:
 		cModel = json.load(fp1)
 
