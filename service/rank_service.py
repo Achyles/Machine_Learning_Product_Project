@@ -6,11 +6,11 @@ def rank_course(inputstr):
 	inputstr = re.findall(r'\w+', inputstr.upper())
 	depart = inputstr[0]
 	cnums = inputstr[1:]
-	slist = {}
+	sDict = {}
 	for cnum in cnums:
-		slist.update({cnum:evaluate(depart, cnum)})
+		sDict.update({cnum:evaluate(depart, cnum)})
 
-	top5 = sorted(slist, key=slist.get, reverse=True)[:5]
+	top5 = sorted(sDict, key=sDict.get, reverse=True)[:5]	
 	
 	return ' '.join(top5)
 
