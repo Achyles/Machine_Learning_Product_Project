@@ -10,7 +10,7 @@ First Iteration:
 
 1. Improve UI and dashboard output
 2. Improve file structure
-3. Implement course recommending service
+3. Include major requirement in course recommanding service
 4. Expand service coverage on courses
 5. Improve training algorithm and evaluating algorithm
 
