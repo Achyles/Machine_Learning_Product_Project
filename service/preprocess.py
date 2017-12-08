@@ -13,7 +13,7 @@ import pandas as pd
 import re
 from filenames import *   
 
-def preprocess():
+def preprocess(depart):
     #load data
     culpaData =  pd.read_csv('../data/culpa.csv')
     courseData =  pd.read_csv('../data/'+depart+'_course_info.csv')
@@ -82,7 +82,7 @@ def preprocess():
     save_json(profDict, fnprof, datapath)
 
 if __name__ == "__main__":
-    preprocess()
+    preprocess(depart)
 
 
 
