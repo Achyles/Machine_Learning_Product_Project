@@ -1,7 +1,7 @@
 // Include data for accessing Google APIs
 import $ from 'jquery'
 
-const apiKey = 'AIzaSyCrg82Taj3Rm_96Idv-EXg7zq12bHmJEig';
+const apiKey = '';
 const url = 'https://www.googleapis.com/urlshortener/v1/url';
 
 // Some page elements
