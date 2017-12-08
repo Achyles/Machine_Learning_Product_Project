@@ -2,7 +2,6 @@
 CU Course Evaluation Service -- Machine Learning Product Project
 
 ### Team Member
-Team Member:
 [Jiaqian Chen](https://github.com/Achyles), jc4676;
 [TaeYoung Choi](https://github.com/taeyoung-choi), tc2777;
 [Zixuan Li](https://github.com/Ironaki), zl2603;
