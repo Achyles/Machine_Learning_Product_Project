@@ -15,7 +15,7 @@ from filenames import *
 
 def course_train(depart, modelname):
 	#define the filename of saved model here
-	fncmodel = depart+modelname
+	fncmodel = modelname
 
 	#load dictionaries of description and rating
 	desDict = load_json(fndes, datapath)

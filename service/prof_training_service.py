@@ -15,7 +15,7 @@ from filenames import *
 
 def prof_train(depart, modelname):
 	#define the filename of saved model here
-	fnpmodel = depart+modelname
+	fnpmodel = modelname
 
 	#load dictionaries of professor rating
 	profDict = load_json(fnprof, datapath)
