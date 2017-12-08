@@ -18,6 +18,10 @@ def preprocess(depart):
     culpaData =  pd.read_csv('../data/culpa.csv')
     courseData =  pd.read_csv('../data/'+depart+'_course_info.csv')
 
+    #save course info to dictionary with key:['course_number']
+    
+
+
 
     #preprocess culpa course data
     cr = culpaData[['Course','Rating']]
@@ -82,9 +86,7 @@ def preprocess(depart):
     save_json(profDict, fnprof, datapath)
 
 if __name__ == "__main__":
-    preprocess(depart)
-
-
+    preprocess('COMS')
 
 
 

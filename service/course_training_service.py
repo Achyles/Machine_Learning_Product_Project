@@ -13,7 +13,7 @@ The trained model is saved as a dictionary in json file.
 from embed_model import WordEmbed as WE
 from filenames import *
 
-def course_tain(depart, modelname):
+def course_train(depart, modelname):
 	#define the filename of saved model here
 	fncmodel = depart+modelname
 
@@ -36,4 +36,4 @@ def course_tain(depart, modelname):
 	save_json(weModel.get_model(), fncmodel, modelpath)
 
 if __name__ == "__main__":
-	course_tain(depart,mncourse)
+	course_train(depart,mncourse)
