@@ -4,6 +4,7 @@
 Created on Thu Dec  7 17:46:39 2017
 
 @author: Zixuan Li
+An experimental tornado API for coures infox
 """
 
 from tornado.web import Application
@@ -22,6 +23,11 @@ class ChartHandler(RequestHandler):
     def get(self, chart_name):
         data = get(["W1004","W3157","W4118"])
         self.write(data)
+        
+    def post(self):
+        text = self.get_argument("text")
+        width = self.get_argument("width", 48)
+        self.write(textwrap.fill(text, int(width)))
 
 if __name__ == "__main__":
     handler_mapping = [
