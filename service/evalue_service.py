@@ -11,8 +11,7 @@ based on pretrained models on course and prof reviews.
 """
 
 import json
-from filenames import *
-	
+from filenames import *	
 	
 def evaluate(depart, cnum):
 	with open(modelpath+mncourse+'.json') as fp1:
@@ -29,12 +28,17 @@ def evaluate(depart, cnum):
 		return 0
 
 	ratingSum = 0
+	rating = 0
 	wordList = desDict[cnum][0]
 
-	for word in wordList:
-		ratingSum += cModel[word][0]
+	if len(wordList)==0:
+		rating = 0
+	else:
+		for word in wordList:
+			if word in cModel.keys():
+				ratingSum += cModel[word][0]
 
-	rating = ratingSum/len(wordList)
+		rating = ratingSum/len(wordList)
 
 	match = 0
 
@@ -59,6 +63,3 @@ def matchname(name1, nameList2):
 
 if __name__ == "__main__":
 	print(evaluate('COMS','W4995'))
-
-
-
