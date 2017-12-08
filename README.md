@@ -59,7 +59,7 @@ This will return recommendation of the CS department.
 (Note: the ranking and recommendation services is currently only working with the CS department (COMS).
 The service currently runs on collected and pre-trained data. We may implement a service to collect and train data when user inputs data.)
 
-## Progress and Sprint
+## Progress and Sprint Plan
 
 #### What we have done so far:
 
