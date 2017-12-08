@@ -10,9 +10,8 @@ returns a score
 based on pretrained models on course and prof reviews.
 """
 
-import json
 import os.path
-
+import pandas as pd
 from filenames import *	
 from make_data import *
 	
@@ -21,14 +20,9 @@ def evaluate(depart, cnum):
 	if not os.path.isfile(modelpath+mncourse+'.json'):
 		make_data()
 
-	with open(modelpath+mncourse+'.json') as fp1:
-		cModel = json.load(fp1)
-
-	with open(modelpath+mnprof+'.json') as fp2:
-		pModel = json.load(fp2)
-
-	with open(datapath+fndes+'.json') as fp3:
-		desDict = json.load(fp3)
+	cModel = load_json(mncourse, modelpath)
+	pModel = load_json(mnprof, modelpath)
+	desDict = load_json(fndes, datapath)
 
 	#Haven't implemented approximate rating for course not exists
 	if cnum not in desDict:
@@ -67,6 +61,14 @@ def matchname(name1, nameList2):
 		if match>=2:
 			return name2
 	return 'none'
+
+def get_info(cnums):
+	infoDict = load_json(fninfo, datapath)
+	res = ''
+	for cnum in cnums:
+		info = infoDict[cnum]
+		res += '%6s%30s%s\n' % (cnum, info[0], info[1])
+	return res
 
 if __name__ == "__main__":
 	print(evaluate('COMS','W4995'))

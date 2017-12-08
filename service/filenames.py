@@ -2,10 +2,10 @@
 depart = 'COMS'
 
 #define the filenames for dictionaries
-
 fndes = depart+'_'+'des_dict'
 fncourse = depart+'_'+'course_dict'
 fnprof = 'prof_dict'
+fninfo = 'info_dict'
 
 #define the filenames for models
 mncourse = 'course_model'

@@ -18,11 +18,6 @@ def preprocess(depart):
     culpaData =  pd.read_csv('../data/culpa.csv')
     courseData =  pd.read_csv('../data/'+depart+'_course_info.csv')
 
-    #save course info to dictionary with key:['course_number']
-    
-
-
-
     #preprocess culpa course data
     cr = culpaData[['Course','Rating']]
     course = []
@@ -53,17 +48,23 @@ def preprocess(depart):
     profr = culpaData[['Professor','Rating']]
     profDict = profr.groupby(['Professor'])['Rating'].mean().to_dict()
 
+
     #preprocess CU directory data
-    desc = courseData[['course number','instructor','description']]
+    desc = courseData[['course number','name','instructor','description']]
     keys = crating.keys()
     desDict = dict()
     crDict = dict()
+    infoDict = dict()
 
     #match the description corpus with the rating score for each course 
     #and store in a dictionary
     for i in range(desc.shape[0]):    
         cnum = desc.at[i, 'course number']    
         
+        #save course info to infoDict
+        infoDict.update({cnum:[desc.at[i, 'name'],
+                                desc.at[i, 'instructor']]})
+
         #obtain the keywords from description and its score
         des = desc.at[i, 'description']
         wlist = list()
@@ -84,6 +85,7 @@ def preprocess(depart):
     save_json(desDict, fndes, datapath)
     save_json(crDict, fncourse, datapath)
     save_json(profDict, fnprof, datapath)
+    save_json(infoDict, fninfo, datapath)
 
 if __name__ == "__main__":
     preprocess('COMS')
