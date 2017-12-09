@@ -1,11 +1,38 @@
 # CU Course Evaluation Service -- MLP
 CU Course Evaluation Service -- Machine Learning Product Project
 
+## Project Information
+
 ### Team Member
 [Jiaqian Chen](https://github.com/Achyles), jc4676;
 [TaeYoung Choi](https://github.com/taeyoung-choi), tc2777;
 [Zixuan Li](https://github.com/Ironaki), zl2603;
 [Zhaoxi Zheng](https://github.com/zhengzhaoxisysu),zz2497
+
+### Bullet Points from the Project Requirements
+
+**Required Services:**
+1. More than one service: We have one for course recommendation and one for course ranking
+2. Inter-service communication
+3. Use github
+4. Use JIRA
+5. Standups and Retros
+
+**Optional Requirements:**
+1. [REST API](./REST_api)
+2. [Train](./service) (and use) [Model](./model)
+3. Present Data: Now data is used in csv and json file, and ranking results are in plain text. We may improve this part in the first iteration
+4. An event-driven service:
+    1. A library shared by at least two services: both of our services uses [web scraping library](./Web_Scraping)
+    2. More than one service: course recommendation and course ranking
+
+
+### Sprint Plan for the First Iteration
+
+1. Improve UI of the website
+3. Include major requirement in course recommending service
+4. Expand service coverage on courses
+
 
 ## Service description
 
@@ -46,12 +73,12 @@ This will return a ranking of courses COMS W4111, COMS W1004, COMS W4995. Add ot
 #### Course Recommendation Services
 
 ``` bash
-    >> python REST_api/recommand_api.py
+    >> python REST_api/recommend_api.py
 ```
 
 open browser, enter "localhost:7777/rec/?rec=COMS"
 
-This will return recommendation of the CS department.
+This will return recommended courses of the CS department.
 
 (Note: the ranking and recommendation services is currently only working with the CS department (COMS).
 The service currently runs on collected and pre-trained data. We may implement a service to collect and train data when user inputs data.)
@@ -66,18 +93,17 @@ The service currently runs on collected and pre-trained data. We may implement a
 4. Implementing course evaluation service based on trained models
 5. Building REST API for services with tornado
 
-#### First Iteration:
 
-1. Improve UI and dashboard output
-2. Improve file structure
-3. Include major requirement in course recommanding service
-4. Expand service coverage on courses
-5. Improve training algorithm and evaluating algorithm
-
-#### Some Technical Debts
+#### Technical Debts
 
 1. CULPA data department unspecified
 2. Course section ignored
 3. Professor name approximate match
 4. Import from preprocess
 5. Used Google NLP API rather than designing our own
+
+#### Possible Improvement in the Future
+
+1. Improve file structure
+2. Improve training algorithm and evaluating algorithm
+3. Make interactive dashboard
