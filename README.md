@@ -63,7 +63,6 @@ After json files are stored in the model direcory, run:
 ##### Course Ranking Service
 
 ``` bash
-
     >> cd React_app/basic_react_dashboard
     
     >> npm install
@@ -75,9 +74,11 @@ After json files are stored in the model direcory, run:
     >> python REST_api/rank_api.py
 ```
 
-Enter the department and course numbers as instructed. e.g. "COMS+W1004+W3157+W4118". Hit submit button
+After the third command a webpage will be open in a browser.
 
-#### Course Recommendation Services
+Enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit submit button. The page will return a ranked list of courses.
+
+#### Course Recommendation Services (To be improved in the first iteration)
 
 ``` bash
     >> python REST_api/recommend_api.py
