@@ -27,13 +27,7 @@ See the [Web Scraping folder](./Web_Scraping) for information about getting cour
 
 #### Preprocessing and Training Service
 
-In order to get data from preprocessing and traning service, run:
-
-``` bash
-    >> python service/make_data.py
-```
-
-json files will be stored in the model directory.
+See the [service folder](./service) for the preprocessing and training model service. The result in json format is stored in the [model folder](./model).
 
 #### Run Services on Webpage
 
