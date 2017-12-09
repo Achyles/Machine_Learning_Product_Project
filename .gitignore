@@ -1,3 +1,20 @@
+# For React App
+React_app/basic_react_dashboard/React_.idea
+React_app/basic_react_dashboard/.vscode
+React_app/basic_react_dashboard/node_modules
+React_app/basic_react_dashboard/build
+React_app/basic_react_dashboard/.DS_Store
+React_app/basic_react_dashboard/*.tgz
+React_app/basic_react_dashboard/my-app*
+React_app/basic_react_dashboard/template/src/__tests__/__snapshots__/
+React_app/basic_react_dashboard/lerna-debug.log
+React_app/basic_react_dashboard/npm-debug.log*
+React_app/basic_react_dashboard/yarn-debug.log*
+React_app/basic_react_dashboard/yarn-error.log*
+React_app/basic_react_dashboard/.changelog
+
+Ironaki_Temp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
