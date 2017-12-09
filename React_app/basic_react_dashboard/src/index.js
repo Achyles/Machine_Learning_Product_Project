@@ -1,7 +1,7 @@
 // Include data for accessing Google APIs
 import $ from 'jquery'
 
-const apiKey = '';
+const apiKey = 'AIzaSyCrg82Taj3Rm_96Idv-EXg7zq12bHmJEig';
 const url = 'https://www.googleapis.com/urlshortener/v1/url';
 
 // Some page elements
@@ -14,35 +14,36 @@ const $responseField = $('#responseField');
 // AJAX functions
 
 function expandUrl() {
-    /*const urlToExpand = url +
-        '?key=' + apiKey +
-        '&shortUrl=' + $inputField.val();*/
-    const urlToExpand = 'http://localhost:7777/chart2';
-    /*const result =$.ajax({
+    const urlToExpand = 'http://localhost:7777/rank/?rank=' + $inputField.val();
+    //const urlToExpand = 'http://localhost:7777/rank/?rank=COMS+W4111+W1004+W4995';
+    const result =$.ajax({
         url: urlToExpand,
         type: 'GET',
-        dataType: 'json',
         success(response) {
-            $responseField.append('<p>Your expanded url is: </p><p>' + response.longUrl + '</p>');
+            console.log(response);
+            $responseField.append('<p>The rank of courses is: </p><p>' + response + '</p>');
         }, error(jqXHR, status, errorThrown) {
             console.log(jqXHR);
         }
-    });*/
-    /*const result = $.ajax({
+    });
+
+    /*const con = 1;
+    $.ajax({
         url: 'http://localhost:7777/chart2',
-        contentType: "application/json; charset=utf-8",
-        crossDomain: true,
-        data: JSON.stringify({"test_1":"1","test_2":"2"}),
+        data: JSON.stringify({'courseNumber':'W4111 W1004 W4995'}),
+        contentType: 'application/x-www-form-urlencoded',
         type: 'POST',
         success: function(response) {
-            console.log(response);
+            //console.log(response);
+            console.log(con);
         },
         error: function(error) {
             console.log(error);
         }
-    });
-    console.log(result);*/
-    const result = fetch(urlToExpand, {
+    });*/
+
+
+    /*const result = fetch(urlToExpand, {
         method: 'POST',
         headers: {
             "Content-type": "application/json"
@@ -57,7 +58,7 @@ function expandUrl() {
         $responseField.append('<p> Your shortened URL is </p><p>' + jsonResponse.id + '</p>');
     return jsonResponse;
 });
-    console.log(result);
+    console.log(result);*/
 }
 
 function shortenUrl() {
