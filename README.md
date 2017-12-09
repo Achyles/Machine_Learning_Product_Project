@@ -78,6 +78,9 @@ After the third command a webpage will be open in a browser.
 
 Enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit submit button. The page will return a ranked list of courses.
 
+**Sample:**
+![Sample Service](./service_example/course_rank.png)
+
 #### Course Recommendation Services (To be improved in the first iteration)
 
 ``` bash
