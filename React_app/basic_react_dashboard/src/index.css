@@ -4,7 +4,7 @@ header {
 }
 
 main {
-    background-color: #0087de;
+    background-color: #ffffff;
     height: 900px;
     text-align: center;
 }
@@ -20,8 +20,17 @@ h1 {
     padding-top: 137px;
 }
 
+h2 {
+    height: 32px;
+    font-family: Roboto;
+    font-size: 24px;
+    text-align: center;
+    color: #1f233e;
+    padding-top: 100px;
+}
+
 .logo {
-    width: 900px;
+    width: 800 px;
     height: 130px;
     margin-top: 40px;
     object-fit: contain;
@@ -34,7 +43,7 @@ h1 {
 }
 
 #input {
-    width: 219px;
+    width: 400px;
     height: 37px;
     border-radius: 3.2px;
     border: solid 0.8px #1f233e;
@@ -45,7 +54,7 @@ h1 {
     font-size: 14px;
     letter-spacing: 0.2px;
     text-align: center;
-    color: #ffffff;
+    color: #1f233e;
 }
 
 #shorten {
@@ -85,9 +94,9 @@ h1 {
     margin: auto;
     margin-top: 25px;
     font-family: Source Sans Pro;
-    font-size: 16px;
+    font-size: 24px;
     letter-spacing: 0.2px;
     text-align: center;
-    color: #ffffff;
+    color:#1f233e;
     overflow-wrap: break-word;
 }
