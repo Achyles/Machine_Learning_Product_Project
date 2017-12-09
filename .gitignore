@@ -1,5 +1,5 @@
 # For React App
-React_app/basic_react_dashboard/React_.idea
+React_app/basic_react_dashboard/.idea
 React_app/basic_react_dashboard/.vscode
 React_app/basic_react_dashboard/node_modules
 React_app/basic_react_dashboard/build
@@ -12,6 +12,7 @@ React_app/basic_react_dashboard/npm-debug.log*
 React_app/basic_react_dashboard/yarn-debug.log*
 React_app/basic_react_dashboard/yarn-error.log*
 React_app/basic_react_dashboard/.changelog
+React_app/basic_react_dashboard/package-lock.json
 
 Ironaki_Temp
 
