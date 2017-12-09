@@ -6,7 +6,7 @@ import sys
 sys.path.append('../service')
 
 from rank_service import *
-from recommand_service import *
+from recommend_service import *
 
 """
 ranking service for input department and course numbers
