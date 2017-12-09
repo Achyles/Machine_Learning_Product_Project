@@ -63,12 +63,19 @@ After json files are stored in the model direcory, run:
 ##### Course Ranking Service
 
 ``` bash
+
+    >> cd React_app/basic_react_dashboard
+    
+    >> npm install
+    
+    >> npm start
+    
+    >> cd ../..
+    
     >> python REST_api/rank_api.py
 ```
 
-open browser, enter "localhost:7777/rank/?rank=COMS+W4111+W1004+W4995"
-
-This will return a ranking of courses COMS W4111, COMS W1004, COMS W4995. Add other courses with "+" in the url.
+Enter the department and course numbers as instructed. e.g. "COMS+W1004+W3157+W4118". Hit submit button
 
 #### Course Recommendation Services
 
