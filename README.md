@@ -30,8 +30,8 @@ CU Course Evaluation Service -- Machine Learning Product Project
 ### Sprint Plan for the First Iteration
 
 1. Improve UI of the website
-3. Include major requirement in course recommending service
-4. Expand service coverage on courses
+2. Include major requirement in course recommending service
+3. Better inter-service communication
 
 
 ## Service description
@@ -107,3 +107,4 @@ The service currently runs on collected and pre-trained data. We may implement a
 1. Improve file structure
 2. Improve training algorithm and evaluating algorithm
 3. Make interactive dashboard
+4. Expand service coverage on courses
