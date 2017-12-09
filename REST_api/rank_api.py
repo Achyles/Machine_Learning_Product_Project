@@ -14,13 +14,21 @@ localhost:7777/rank/?rank=COMS+W4111+w1004+w4995
 """
 
 class RankHandler(RequestHandler):
+	def set_default_headers(self):
+		self.set_header('Access-Control-Allow-Credentials', 'true')
+		self.set_header("Access-Control-Allow-Origin", "*")
+		self.set_header("Access-Control-Allow-Headers", "content-type, Authorization, Accept, X-Requested-With")
+		self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+	
 	def get(self):
-		#take department + course_number input 
-		#e.g.: 'COMS w4111 w4995 w4170'
-		input = self.get_argument('rank','none')
-
-		self.write(rank_course(input))
-
+	    #take department + course_number input 
+	    #e.g.: 'COMS w4111 w4995 w4170'
+	    input = self.get_argument('rank','none')
+	    self.write(rank_course(input))
+	
+	def options(self):
+		self.set_status(204)
+		self.finish()
 """	def post(self):
 		input = self.get_argument('rank','none')
 		self.write(rank_course(input))"""
