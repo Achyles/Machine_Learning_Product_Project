@@ -62,29 +62,36 @@ After json files are stored in the model direcory, run:
 
 ##### Course Ranking Service
 
+Open Machine_Learning_Product_Project folder in terminal, run:
+
 ``` bash
-    >> cd React_app/basic_react_dashboard
+    >> cd React_app/basic_react_dashboard/
     
     >> npm install
     
     >> npm start
-    
-    >> cd ../../REST_api
+```
+After the third command a webpage will be open in a browser.
+
+Open Machine_Learning_Product_Project folder in another terminal, run:
+
+``` bash
+    >> cd REST_api/
     
     >> python rank_api.py
 ```
 
-After the third command a webpage will be open in a browser.
-
-Enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit submit button. The page will return a ranked list of courses.
+With both terminal running, enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit submit button. The page will return a ranked list of courses.
 
 **Example:**
 ![Sample Service](./service_example/course_rank.png)
 
 #### Course Recommendation Services (To be improved in the first iteration)
 
+Open Machine_Learning_Product_Project folder in terminal, run:
+
 ``` bash
-    >> cd REST_api
+    >> cd REST_api/
     
     >> python recommend_api.py
 ```
