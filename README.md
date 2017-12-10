@@ -69,9 +69,9 @@ After json files are stored in the model direcory, run:
     
     >> npm start
     
-    >> cd ../..
+    >> cd ../../REST_api
     
-    >> python REST_api/rank_api.py
+    >> python rank_api.py
 ```
 
 After the third command a webpage will be open in a browser.
@@ -84,7 +84,9 @@ Enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4
 #### Course Recommendation Services (To be improved in the first iteration)
 
 ``` bash
-    >> python REST_api/recommend_api.py
+    >> cd REST_api
+    
+    >> python recommend_api.py
 ```
 
 open browser, enter "localhost:7777/rec/?rec=COMS"
