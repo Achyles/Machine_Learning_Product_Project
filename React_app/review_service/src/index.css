@@ -37,7 +37,7 @@ h2 {
 }
 
 .container {
-    width: 400px;
+    width: 1000px;
     margin: auto;
     text-align: center;
 }
@@ -88,7 +88,7 @@ h2 {
 }
 
 #responseField {
-    min-width: 191px;
+    width: 1000px;
     min-height: 120px;
     border: solid 2px #ffffff;
     margin: auto;
