@@ -12,7 +12,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 ### Bullet Points from the Project Requirements
 
 **Required Services:**
-1. More than one service: We have one for course recommendation and one for course ranking
+1. More than one service: We have three service: course ranking, course recommendataion and course/professor review
 2. Inter-service communication
 3. Use github
 4. Use JIRA
@@ -24,12 +24,12 @@ CU Course Evaluation Service -- Machine Learning Product Project
 3. Present Data: Now data is used in csv and json file, and ranking results are in plain text. We may improve this part in the first iteration
 4. An event-driven service:
     1. A library shared by at least two services: both of our services uses [web scraping library](./Web_Scraping)
-    2. More than one service: course recommendation and course ranking
+    2. More than one service
 
 
 ### Sprint Plan for the First Iteration
 
-1. Improve UI of the website
+1. Improve UI of the website. [Better UI](./service_example)
 2. Include major requirement in course recommending service
 3. Better inter-service communication
 
@@ -83,6 +83,9 @@ Open Machine_Learning_Product_Project folder in another terminal, run:
 
 With both terminal running, enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit submit button. The page will return a ranked list of courses.
 
+**Example:**
+![Sample Service](./service_example/course_rank.png)
+
 ##### Course Review Service
 
 Open Machine_Learning_Product_Project folder in terminal, run:
@@ -107,7 +110,7 @@ Open Machine_Learning_Product_Project folder in another terminal, run:
 With both terminal running, enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "Feng Yang+2024" or "Yang Feng+2024". Hit submit button. The page will return the top three key sentences from all reviews for the course and professor.
 
 **Example:**
-![Sample Service](./service_example/course_rank.png)
+![Sample Service2](./service_example/review.png)
 
 #### Course Recommendation Services (To be improved in the first iteration)
 
@@ -123,7 +126,7 @@ open browser, enter "localhost:7777/rec/?rec=COMS"
 
 This will return recommended courses of the CS department.
 
-(Note: the ranking and recommendation services is currently only working with the CS department (COMS).
+(Note: the ranking and recommendation services is currently only working with the CS department (COMS). The review service works on any data existed in the database.
 The service currently runs on collected and pre-trained data. We may implement a service to collect and train data when user inputs data.)
 
 ## Progress and Sprint Plan
