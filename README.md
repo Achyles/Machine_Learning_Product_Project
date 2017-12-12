@@ -21,7 +21,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 **Optional Requirements:**
 1. [REST API](./REST_api)
 2. [Train](./service) (and use) [Model](./model)
-3. Present Data: Now data is used in csv and json file, and ranking results are in plain text. We may improve this part in the first iteration
+3. Present Data: Now data is used in csv and json file, and ranking results are in plain text.
 4. An event-driven service:
     1. A library shared by at least two services: both of our services uses [web scraping library](./Web_Scraping)
     2. More than one service
@@ -29,9 +29,9 @@ CU Course Evaluation Service -- Machine Learning Product Project
 
 ### Sprint Plan for the First Iteration
 
-1. Improve UI of the website. [Better UI](./service_example)
+1. Improve UI of the website: [Better UI](./service_example)
 2. Include major requirement in course recommending service
-3. Better inter-service communication
+3. Better inter-service communication: Wrapped up sevice communication with [React App](./REACT_app)
 
 
 ## Service description
