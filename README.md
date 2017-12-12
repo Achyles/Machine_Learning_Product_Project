@@ -83,6 +83,29 @@ Open Machine_Learning_Product_Project folder in another terminal, run:
 
 With both terminal running, enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit submit button. The page will return a ranked list of courses.
 
+##### Course Review Service
+
+Open Machine_Learning_Product_Project folder in terminal, run:
+
+``` bash
+    >> cd React_app/review_service/
+    
+    >> npm install
+    
+    >> npm start
+```
+After the third command a webpage will be open in a browser.
+
+Open Machine_Learning_Product_Project folder in another terminal, run:
+
+``` bash
+    >> cd REST_api/
+    
+    >> python review_api.py
+```
+
+With both terminal running, enter the department and course numbers as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "Feng Yang+2024" or "Yang Feng+2024". Hit submit button. The page will return the top three key sentences from all reviews for the course and professor.
+
 **Example:**
 ![Sample Service](./service_example/course_rank.png)
 
