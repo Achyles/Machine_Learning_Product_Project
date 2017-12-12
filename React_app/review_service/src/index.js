@@ -1,7 +1,6 @@
 import $ from 'jquery'
 import './index.css'
 
-
 // Some page elements
 const $inputField = $('#input');
 const $expandButton = $('#expand');
