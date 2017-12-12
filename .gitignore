@@ -1,7 +1,7 @@
 # For React App
 React_app/basic_react_dashboard/.idea
 React_app/basic_react_dashboard/.vscode
-React_app/basic_react_dashboard/node_modules
+**/node_modules
 React_app/basic_react_dashboard/build
 React_app/basic_react_dashboard/.DS_Store
 React_app/basic_react_dashboard/*.tgz
