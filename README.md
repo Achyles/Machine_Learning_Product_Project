@@ -23,7 +23,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 2. [Train](./service) (and use) [Model](./model)
 3. Present Data: Now data is used in csv and json file.
 4. An event-driven service:
-    1. A library shared by at least two services: both of our services uses [web scraping library](./Web_Scraping)
+    1. A library shared by at least two services: our services use [web scraping library](./Web_Scraping)
     2. More than one service
 
 
@@ -113,7 +113,7 @@ With both terminal running, enter the professor name and the course number as in
 ![Sample Service2](./service_example/review.png)
 
 **Example (not in database):**
-![Sample Service3](./service_example/review_failed.png)
+![Sample Service3](./service_example/review_fail.png)
 
 #### Course Recommendation Services (To be improved in the first iteration)
 
