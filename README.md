@@ -107,7 +107,9 @@ Open Machine_Learning_Product_Project folder in another terminal, run:
     >> python review_api.py
 ```
 
-With both terminal running, enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "Feng Yang+2024" or "Yang Feng+2024". Hit submit button. The page will return the top three key sentences from all reviews for the course and professor.
+With both terminal running, enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "John Doe+2024" or "Doe John+2024". Hit submit button. The page will return the top three key sentences from all reviews for the course and professor.
+
+The list of professors and courses can be seen on [culpa page](http://culpa.info/). For this MVP, we have built the service for Computer Science and Statistics departments.
 
 **Example:**
 ![Sample Service2](./service_example/review.png)
