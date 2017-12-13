@@ -12,7 +12,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 ### Bullet Points from the Project Requirements
 
 **Required Services:**
-1. More than one service: We have three service: course ranking, course recommendataion and course/professor review
+1. More than one service: We have three services: course ranking, course recommendataion and course/professor review
 2. Inter-service communication
 3. Use github
 4. Use JIRA
@@ -21,7 +21,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 **Optional Requirements:**
 1. [REST API](./REST_api)
 2. [Train](./service) (and use) [Model](./model)
-3. Present Data: Now data is used in csv and json file, and ranking results are in plain text.
+3. Present Data: Now data is used in csv and json file.
 4. An event-driven service:
     1. A library shared by at least two services: both of our services uses [web scraping library](./Web_Scraping)
     2. More than one service
@@ -31,7 +31,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 
 1. Improve UI of the website: [Better UI](./service_example)
 2. Include major requirement in course recommending service
-3. Better inter-service communication: Wrapped up sevice communication with [React App](./REACT_app)
+3. Better inter-service communication: Wrapped up back-end sevices and improved inter-service communication with [React App](./REACT_app)
 
 
 ## Service description
@@ -111,6 +111,9 @@ With both terminal running, enter the professor name and the course number as in
 
 **Example:**
 ![Sample Service2](./service_example/review.png)
+
+**Example (not in database):**
+![Sample Service3](./service_example/review_failed.png)
 
 #### Course Recommendation Services (To be improved in the first iteration)
 
