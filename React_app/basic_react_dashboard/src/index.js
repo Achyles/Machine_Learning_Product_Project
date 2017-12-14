@@ -8,17 +8,19 @@ const url = 'https://www.googleapis.com/urlshortener/v1/url';
 // Some page elements
 
 const $inputField = $('#input');
-const $expandButton = $('#expand');
+const $rankButton = $('#but1');
+const $recButton = $('#but2');
+const $reviewButton = $('#but3');
 const $shortenButton = $('#shorten');
 const $responseField = $('#responseField');
 
 // AJAX functions
 
-function expandUrl() {
-    const urlToExpand = 'http://localhost:7777/rank/?rank=' + $inputField.val();
+function rankUrl() {
+    const urlOfRank = 'http://localhost:7777/rank/?rank=' + $inputField.val();
     //const urlToExpand = 'http://localhost:7777/rank/?rank=COMS+W4111+W1004+W4995';
     const result =$.ajax({
-        url: urlToExpand,
+        url: urlOfRank,
         type: 'GET',
         success(response) {
             console.log(response);
@@ -62,38 +64,56 @@ function expandUrl() {
     console.log(result);*/
 }
 
-function shortenUrl() {
-    const urlWithKey = url + '?key=' + apiKey;
-    const urlToShorten = $inputField.val();
-
-    $.ajax({
-        url: urlWithKey,
-        type: 'POST',
-        data: JSON.stringify({longUrl: urlToShorten}),
-        dataType: 'json',
-        contentType: 'application/json',
+function recUrl() {
+    const urlOfRec = 'http://localhost:7777/rec/?rec=' + $inputField.val();
+    //const urlToExpand = 'http://localhost:7777/rank/?rank=COMS+W4111+W1004+W4995';
+    const result =$.ajax({
+        url: urlOfRec,
+        type: 'GET',
         success(response) {
-            $responseField.append('<p>Your shortened url is: </p><p>' + response.id + '</p>');
-        },
-        error(jqXHR, status, errorThrown) {
+            console.log(response);
+            $responseField.append('<p>The recommended courses are: </p><p>' + response + '</p>');
+        }, error(jqXHR, status, errorThrown) {
             console.log(jqXHR);
         }
     });
 }
 
-function expan() {
+function reviewUrl() {
+    const urlOfRev = 'http://localhost:7777/review/?review=' + $inputField.val();
+    //const urlToExpand = 'http://localhost:7777/rank/?rank=COMS+W4111+W1004+W4995';
+    const result =$.ajax({
+        url: urlOfRev,
+        type: 'GET',
+        success(response) {
+            console.log(response);
+            $responseField.append('<p>The review of courses are: </p><p>' + response + '</p>');
+        }, error(jqXHR, status, errorThrown) {
+            console.log(jqXHR);
+        }
+    });
+}
+
+function rank() {
     $responseField.empty();
-    expandUrl();
+    rankUrl();
     return false;
 }
 
-function shorten() {
+function recommend() {
     $responseField.empty();
-    shortenUrl();
+    recUrl();
+    return false;
+}
+
+function review() {
+    $responseField.empty();
+    reviewUrl();
     return false;
 }
 
 // Call functions on submit
 
-$expandButton.click(expan);
-$shortenButton.click(shorten);
+$rankButton.click(rank);
+$recButton.click(recommend);
+$reviewButton.click(review);
