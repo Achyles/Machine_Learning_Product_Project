@@ -78,10 +78,10 @@ Open Machine_Learning_Product_Project folder in another terminal, run:
 ``` bash
     >> cd REST_api/
     
-    >> python rank_api.py
+    >> python main_api.py
 ```
 
-With both terminal running, enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit submit button. The page will return a ranked list of courses.
+With both terminal running, enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit rank button. The page will return a ranked list of courses.
 
 **Example:**
 ![Sample Service](./service_example/course_rank.png)
