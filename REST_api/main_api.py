@@ -10,17 +10,6 @@ from review_api import *
 This is the main handler of CU Course Evaluation Service
 """
 
-class MainHandler(RequestHandler):
-	def set_default_headers(self):
-		self.set_header('Access-Control-Allow-Credentials', 'true')
-		self.set_header("Access-Control-Allow-Origin", "*")
-		self.set_header("Access-Control-Allow-Headers", "content-type, Authorization, Accept, X-Requested-With")
-		self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
-
-	def options(self):
-		self.set_status(204)
-		self.finish()
-
 if __name__ == "__main__":
 		handler_mapping = [
 							(r'/rank/', RankHandler),
