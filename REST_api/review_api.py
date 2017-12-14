@@ -9,13 +9,13 @@ sys.path.append('../service')
 from review_service import *
 
 """
-ranking service for input department and course numbers
+give reviews from Culpa for input course numebrs and instructors
 e.g.:
-localhost:7777/rank/?rank=COMS+W4111+w1004+w4995
+localhost:7777/review/?review=COMS+W4111+w1004+w4995
 """
 
 
-class RankHandler(RequestHandler):
+class ReviewHandler(RequestHandler):
     def set_default_headers(self):
         self.set_header('Access-Control-Allow-Credentials', 'true')
         self.set_header("Access-Control-Allow-Origin", "*")
@@ -48,13 +48,9 @@ class RankHandler(RequestHandler):
         self.finish()
 
 
-"""	def post(self):
-		input = self.get_argument('rank','none')
-		self.write(rank_course(input))"""
-
 if __name__ == "__main__":
     handler_mapping = [
-        (r'/review/', RankHandler),
+        (r'/review/', ReviewHandler),
     ]
     application = Application(handler_mapping)
     application.listen(7777)
