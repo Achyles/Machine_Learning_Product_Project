@@ -9,6 +9,12 @@ CU Course Evaluation Service -- Machine Learning Product Project
 [Zixuan Li](https://github.com/Ironaki), zl2603;
 [Zhaoxi Zheng](https://github.com/zhengzhaoxisysu),zz2497
 
+## Service description
+
+CU Course Evaluation Service is a machine learning product that provides functions of course and professor recommendation, ranking and evaluations for Columbia University student. The data come from [CU Course Directory](http://www.columbia.edu/cu/bulletin/uwb/) and  [CULPA](http://culpa.info/). Currently it provides limited features of recommendation, ranking and reviews for Computer Science courses.
+
+The services if wrapped up in a React App. The services are implemented in REST api with Tornado. 
+
 ### Bullet Points from the Project Requirements
 
 **Required Services:**
@@ -32,11 +38,6 @@ CU Course Evaluation Service -- Machine Learning Product Project
 1. Improve UI of the website: [Better UI](./service_example)
 2. Improve course recommending service
 3. Better inter-service communication: Wrapped up back-end sevices and improved inter-service communication with [React App](./REACT_app)
-
-
-## Service description
-
-CU Course Evaluation Service is a machine learning product that provides functions of course and professor recommendation, ranking and evaluations for Columbia University student. The data come from [CU Course Directory](http://www.columbia.edu/cu/bulletin/uwb/) and  [CULPA](http://culpa.info/). Currently it provides limited features of recommendation and ranking for Computer Science courses.
 
 ## MVP Architecture
 ![MVP Architecture](./data/mvp.png)
