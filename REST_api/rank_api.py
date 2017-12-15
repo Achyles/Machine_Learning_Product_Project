@@ -2,10 +2,10 @@ from tornado.web import Application
 from tornado.web import RequestHandler
 from tornado.ioloop import IOLoop 
 
-import sys
-sys.path.append('../service')
+import re
+import requests
 
-from rank_service import *
+
 
 """
 ranking service for input department and course numbers
@@ -25,13 +25,33 @@ class RankHandler(RequestHandler):
 	    #e.g.: 'COMS w4111 w4995 w4170'
 	    input = self.get_argument('rank','none')
 	    self.write(rank_course(input))
+	    
 	
 	def options(self):
 		self.set_status(204)
 		self.finish()
-"""	def post(self):
-		input = self.get_argument('rank','none')
-		self.write(rank_course(input))"""
+
+	def post(self):
+		input = self.get_argument('ex','none')
+		self.write(input)
+
+def rank_course(inputstr):
+	inputstr = re.findall(r'\w+', inputstr.upper())
+	depart = inputstr[0]
+	cnums = inputstr[1:]
+	sDict = {}
+	for cnum in cnums:
+		score = requests.post(url = 'http://localhost:7778/evalue/', data = {'depart':depart, 'cnum':cnum})
+		sDict.update({cnum:float(score.text)})
+
+
+	top5 = sorted(sDict, key=sDict.get, reverse=True)[:5]	
+	
+	rankinfo = requests.post(url = 'http://localhost:7778/getinfo/', data = {'depart':depart, 'cnums':' '.join(top5)})
+
+	return rankinfo.text
+
+
 
 if __name__ == "__main__":
 		handler_mapping = [

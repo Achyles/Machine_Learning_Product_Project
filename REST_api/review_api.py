@@ -9,7 +9,7 @@ sys.path.append('../service')
 from review_service import *
 
 """
-give reviews from Culpa for input course numebrs and instructors
+ranking service for input department and course numbers
 e.g.:
 localhost:7777/review/?review=COMS+W4111+w1004+w4995
 """
@@ -47,6 +47,10 @@ class ReviewHandler(RequestHandler):
         self.set_status(204)
         self.finish()
 
+
+"""	def post(self):
+		input = self.get_argument('rank','none')
+		self.write(rank_course(input))"""
 
 if __name__ == "__main__":
     handler_mapping = [
