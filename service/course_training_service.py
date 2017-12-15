@@ -5,8 +5,8 @@
 """
 
 """
-This is a model training service that
-takes in culpa and CU course directory data to train the word embedding model.
+This is a model training service thattakes in culpa and 
+CU course directory data to train the word embedding model.
 The trained model is saved as a dictionary in json file.
 """
 
@@ -18,8 +18,8 @@ def course_train(depart, modelname):
 	fncmodel = modelname
 
 	#load dictionaries of description and rating
-	desDict = load_json(fndes, datapath)
-	crDict = load_json(fncourse, datapath)
+	desDict = load_json(depart+fndes, datapath)
+	crDict = load_json(depart+fncourse, datapath)
 
 	#obtain the lists of keywords and corresponding rating
 	wordList = list()

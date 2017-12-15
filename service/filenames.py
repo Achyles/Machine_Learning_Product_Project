@@ -2,8 +2,8 @@
 depart = 'COMS'
 
 #define the filenames for dictionaries
-fndes = depart+'_'+'des_dict'
-fncourse = depart+'_'+'course_dict'
+fndes = '_des_dict'
+fncourse = '_course_dict'
 fnprof = 'prof_dict'
 fninfo = 'info_dict'
 
@@ -21,8 +21,14 @@ import os
 #save input object to json file
 #create directory if not exist
 def save_json(myob, filename, path):
+
     if not os.path.exists(path):
         os.makedirs(path)
+
+    if os.path.isfile(path+filename+'.json'):
+    	postob = load_json(filename, path)
+    	myob.update(postob)
+
     with open(path+filename+'.json','w') as fp:
         json.dump(myob, fp)
 

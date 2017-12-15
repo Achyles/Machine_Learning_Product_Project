@@ -82,6 +82,11 @@ def preprocess(depart):
 
             
     #save the dictionaries to json files
+    global fndes
+    global fncourse
+    fndes = depart+'_'+'des_dict'
+    fncourse = depart+'_'+'course_dict'
+    
     save_json(desDict, fndes, datapath)
     save_json(crDict, fncourse, datapath)
     save_json(profDict, fnprof, datapath)
