@@ -30,7 +30,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 ### Sprint Plan for the First Iteration
 
 1. Improve UI of the website: [Better UI](./service_example)
-2. Include major requirement in course recommending service
+2. Improve course recommending service
 3. Better inter-service communication: Wrapped up back-end sevices and improved inter-service communication with [React App](./REACT_app)
 
 
@@ -54,13 +54,9 @@ See the [Web Scraping folder](./Web_Scraping) for information about getting cour
 
 #### Preprocessing and Training Service
 
-See the [service folder](./service) for the preprocessing and training model service. The result in json format is stored in the [model folder](./model).
+See the [service folder](./service) for the preprocessing and training model service. The result in json format is stored in the [model folder](./model). Preprocessing is done when the server starts to run.
 
 #### Run Services on Webpage
-
-After json files are stored in the model direcory, run:
-
-##### Course Ranking Service
 
 Open Machine_Learning_Product_Project folder in terminal, run:
 
@@ -71,7 +67,7 @@ Open Machine_Learning_Product_Project folder in terminal, run:
     
     >> npm start
 ```
-After the third command a webpage will be open in a browser.
+After the "npm start" command a webpage will be open in a browser.
 
 Open Machine_Learning_Product_Project folder in another terminal, run:
 
@@ -79,35 +75,21 @@ Open Machine_Learning_Product_Project folder in another terminal, run:
     >> cd REST_api/
     
     >> python main_api.py
+    
+    >> python service_api.py
 ```
 
-With both terminal running, enter the department and course numbers as instructed, e.g. "COMS+W1004+W3157+W4118". Hit rank button. The page will return a ranked list of courses.
+##### Course Ranking Service
 
-**Example:**
-![Sample Service](./service_example/course_rank.png)
+With both terminal running, enter the department and course numbers as instructed, e.g. "COMS W1004 W3157 W4118". Hit Rank button. The page will return a ranked list of courses.
+
+##### Course Recommending Service
+
+With both terminal running, enter the department abbreviation , e.g. "COMS". Hit Recommend button. The page will return a ranked list of recommended courses.
 
 ##### Course Review Service
 
-Open Machine_Learning_Product_Project folder in terminal, run:
-
-``` bash
-    >> cd React_app/review_service/
-    
-    >> npm install
-    
-    >> npm start
-```
-After the third command a webpage will be open in a browser.
-
-Open Machine_Learning_Product_Project folder in another terminal, run:
-
-``` bash
-    >> cd REST_api/
-    
-    >> python review_api.py
-```
-
-With both terminal running, enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "John Doe+2024" or "Doe John+2024". Hit submit button. The page will return the top three key sentences from all reviews for the course and professor.
+With both terminal running, enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "John Doe+2024" or "Doe John+2024". Hit Review button. The page will return the top three key sentences from all reviews for the course and professor.
 
 The list of professors and courses are gathered from [culpa](http://culpa.info/). For this MVP, we have built the service for Computer Science and Statistics departments.
 
@@ -117,19 +99,6 @@ The list of professors and courses are gathered from [culpa](http://culpa.info/)
 **Example (not in database):**
 ![Sample Service3](./service_example/review_fail.png)
 
-#### Course Recommendation Services (To be improved in the first iteration)
-
-Open Machine_Learning_Product_Project folder in terminal, run:
-
-``` bash
-    >> cd REST_api/
-    
-    >> python recommend_api.py
-```
-
-open browser, enter "localhost:7777/rec/?rec=COMS"
-
-This will return recommended courses of the CS department.
 
 (Note: the ranking and recommendation services is currently only working with the CS department (COMS). The review service works on any data existed in the database.
 The service currently runs on collected and pre-trained data. We may implement a service to collect and train data when user inputs data.)
@@ -143,6 +112,7 @@ The service currently runs on collected and pre-trained data. We may implement a
 3. Implementing model training services for course and professor rating
 4. Implementing course evaluation service based on trained models
 5. Building REST API for services with tornado
+6. Building React APP
 
 
 #### Technical Debts
