@@ -37,7 +37,7 @@ The services if wrapped up in a React App. The services are implemented in REST 
 
 1. Improve UI of the website: [Better UI](./service_example)
 2. Improve [course recommending service](./React_app/main_service)
-3. Better inter-service communication: Wrapped up back-end sevices and improved inter-service communication with [React App](./REACT_app)
+3. Better inter-service communication: Wrapped up back-end sevices and improved inter-service communication with [React App](./React_app/main_service)
 
 ## MVP Architecture
 ![MVP Architecture](./data/mvp.png)
@@ -103,7 +103,7 @@ Enter the department abbreviation , e.g. "COMS". Hit Recommend button. The page 
 
 Enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "John Doe 2024" or "Doe John 2024". Hit Review button. The page will return the top three key sentences from all reviews for the course and professor.
 
-The list of professors and courses are gathered from [culpa](http://culpa.info/). For this MVP, we have built the service for Computer Science and Statistics departments.
+The list of professors and courses are gathered from [CULPA](http://culpa.info/). For this MVP, we have built the service for Computer Science and Statistics departments.
 
 **Example:**
 ![Sample Service2](./service_example/review.png)
