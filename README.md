@@ -13,7 +13,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 
 CU Course Evaluation Service is a machine learning product that provides functions of course and professor recommendation, ranking and evaluations for Columbia University student. The data come from [CU Course Directory](http://www.columbia.edu/cu/bulletin/uwb/) and  [CULPA](http://culpa.info/). Currently it provides limited features of recommendation, ranking and reviews for Computer Science courses.
 
-The services if wrapped up in a React App. The services are implemented in REST api with Tornado. 
+The services if wrapped up in a React App. The services are implemented in REST api with Tornado library. 
 
 ### Bullet Points from the Project Requirements
 
@@ -36,7 +36,7 @@ The services if wrapped up in a React App. The services are implemented in REST 
 ### Sprint Plan for the First Iteration
 
 1. Improve UI of the website: [Better UI](./service_example)
-2. Improve course recommending service
+2. Improve [course recommending service](./React_app/main_service)
 3. Better inter-service communication: Wrapped up back-end sevices and improved inter-service communication with [React App](./REACT_app)
 
 ## MVP Architecture
@@ -62,7 +62,7 @@ See the [service folder](./service) for the preprocessing and training model ser
 Open Machine_Learning_Product_Project folder in terminal, run:
 
 ``` bash
-    >> cd React_app/basic_react_dashboard/
+    >> cd React_app/main_service/
     
     >> npm install
     
@@ -70,27 +70,38 @@ Open Machine_Learning_Product_Project folder in terminal, run:
 ```
 After the "npm start" command a webpage will be open in a browser.
 
-Open Machine_Learning_Product_Project folder in another terminal, run:
+Open Machine_Learning_Product_Project folder in another terminal, run the main api:
 
 ``` bash
     >> cd REST_api/
     
     >> python main_api.py
+```
+Open Machine_Learning_Product_Project folder in a third terminal, run the service api:
+
+``` bash
+    >> cd REST_api/
     
     >> python service_api.py
 ```
 
 ##### Course Ranking Service
 
-With both terminal running, enter the department and course numbers as instructed, e.g. "COMS W1004 W3157 W4118". Hit Rank button. The page will return a ranked list of courses.
+With three terminal running, enter the department and course numbers as instructed, e.g. "COMS W1004 W3157 W4118". Hit Rank button. The page will return a ranked list of courses.
+
+**Example:**
+![Ranking](./service_example/Ranking.png)
 
 ##### Course Recommending Service
 
-With both terminal running, enter the department abbreviation , e.g. "COMS". Hit Recommend button. The page will return a ranked list of recommended courses.
+Enter the department abbreviation , e.g. "COMS". Hit Recommend button. The page will return a ranked list of recommended courses.
+
+**Example:**
+![Ranking](./service_example/Recommending.png)
 
 ##### Course Review Service
 
-With both terminal running, enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "John Doe+2024" or "Doe John+2024". Hit Review button. The page will return the top three key sentences from all reviews for the course and professor.
+Enter the professor name and the course number as instructed. As long as there is a space between first and last name, the order of them does not matter, e.g. "John Doe 2024" or "Doe John 2024". Hit Review button. The page will return the top three key sentences from all reviews for the course and professor.
 
 The list of professors and courses are gathered from [culpa](http://culpa.info/). For this MVP, we have built the service for Computer Science and Statistics departments.
 
