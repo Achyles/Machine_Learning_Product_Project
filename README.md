@@ -9,6 +9,8 @@ CU Course Evaluation Service -- Machine Learning Product Project
 [Zixuan Li](https://github.com/Ironaki), zl2603;
 [Zhaoxi Zheng](https://github.com/zhengzhaoxisysu),zz2497
 
+##JIRA page: [CU Course Evaluation Service](https://cucess.atlassian.net/secure/Dashboard.jspa)
+
 ## Service description
 
 CU Course Evaluation Service is a machine learning product that provides functions of course and professor recommendation, ranking and evaluations for Columbia University student. The data come from [CU Course Directory](http://www.columbia.edu/cu/bulletin/uwb/) and  [CULPA](http://culpa.info/). Currently it provides limited features of recommendation, ranking and reviews for Computer Science courses.
