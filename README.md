@@ -9,7 +9,7 @@ CU Course Evaluation Service -- Machine Learning Product Project
 [Zixuan Li](https://github.com/Ironaki), zl2603;
 [Zhaoxi Zheng](https://github.com/zhengzhaoxisysu),zz2497
 
-##JIRA page: [CU Course Evaluation Service](https://cucess.atlassian.net/secure/Dashboard.jspa)
+JIRA page: [CU Course Evaluation Service](https://cucess.atlassian.net/secure/Dashboard.jspa)
 
 ## Service description
 
