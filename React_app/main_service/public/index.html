@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CU Course Evaluation Service</title>
+  <link rel="stylesheet" type="text/css" href="src/index.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <img src="CU.png" class="logo" />
+</header>
+<main id="main">
+  <div class="container">
+
+    <h1>
+      Ranking: Enter department name and a list of course number
+      <br></br>
+      Recommendation: Enter a department name
+      <br></br>
+      Review: Enter a instructor name and a course number
+    </h1>
+
+    <h2>  e.g. COMS W4111 W1004 W4995 </h2>
+
+    <h3> e.g. COMS </h3>
+
+    <h4>  e.g. Jae Lee 4118 </h4>
+
+
+
+
+    <form id="form" autocomplete="off">
+      <input type="text" id="input" value="">
+      <button id="but1">Rank</button>
+      <button id="but2">Recommend</button>
+      <button id="but3">Reviews</button>
+    </form>
+
+    <div id="responseField">
+
+    </div>
+
+  </div>
+</main>
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src="src/App.js"></script>
+</body>
+</html>
